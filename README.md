@@ -1,1 +1,1 @@
-# map-app
+# MapNextJS
