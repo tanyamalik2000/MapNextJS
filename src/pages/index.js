@@ -1,8 +1,8 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
 import styles from '../styles/Home.module.css'
 import Map from 'react-map-gl'
+import DeckGL from '@deck.gl/react';
+import { NewYorkTreesLayer } from '../layers/scatterplot/trees-NY'
 
 const MAPBOX_TOKEN = 'pk.eyJ1IjoieXV5YWZ1amltb3RvIiwiYSI6ImNsZWdyZDA4NTA1ZGwzeG53Y2c2OGY0bjAifQ._mbKMYj_moCfX1GcJmxAJg'
 
@@ -16,6 +16,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
+        <DeckGL
+          initialViewState={NewYorkTreesLayer.initialViewState}
+          controller={true}
+          layers={[NewYorkTreesLayer.layer]}
+        >
         <Map
           initialViewState={{
             longitude: -122.4,
@@ -26,6 +31,7 @@ export default function Home() {
           mapStyle="mapbox://sprites/mapbox/bright-v8"
           mapboxAccessToken={MAPBOX_TOKEN}
         />
+        </DeckGL>
       </main>
     </>
   )
