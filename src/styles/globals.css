@@ -105,3 +105,65 @@ a {
     color-scheme: dark;
   }
 }
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+  z-index: 10000;
+  width: 100%;
+  padding: 1rem;
+}
+
+nav h1 {
+  width: 15rem
+}
+
+nav .buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+nav .buttons button {
+  cursor: pointer;
+  padding: 1rem;
+  border: none;
+  background-color: #FFFFFF;
+  border-radius: 0.5rem;
+}
+
+nav .buttons button:hover {
+  background-color: #d2d2d2;
+}
+
+nav .buttons button.selected {
+  background-color: #d2d2d2;
+}
+
+nav .dummy {
+  width: 15rem
+}
+
+.source {
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  background-color: #ffffffae;
+  z-index: 10000;
+  position: absolute;
+  top: 100px;
+  right: 24px;
+}
+
+.source a {
+  text-decoration: underline;
+}

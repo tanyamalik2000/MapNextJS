@@ -257,7 +257,7 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: bright) {
   .vercelLogo {
     filter: invert(1);
   }

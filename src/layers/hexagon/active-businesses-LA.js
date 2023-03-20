@@ -24,5 +24,9 @@ const layerOptions = ({
 export const ActiveBusinessLosAngelesLayer = {
     layerOptions,
     initialViewState,
-    LayerClass:HexagonLayer
+    LayerClass:HexagonLayer,
+    title: 'Listing of Active Businesses',
+    description: 'Listing of all active businesses currently registered with the Office of Finance. An "active" business is defined as a registered business whose owner has not notified the Office of Finance of a cease of business operations. Update Interval: Monthly.',
+    source: 'Los Angeles Open Data',
+    sourceLink: 'https://data.lacity.org/Administration-Finance/Listing-of-Active-Businesses/6rrh-rzua'
 };
